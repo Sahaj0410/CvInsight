@@ -188,11 +188,4 @@ This project is open source and available under the MIT License.
 -   [Drizzle ORM](https://orm.drizzle.team)
 -   [shadcn/ui](https://ui.shadcn.com)
 
-## 💬 Support
-
--   Better Auth Discord: [Join here](https://discord.gg/better-auth)
--   GitHub Issues: [Report issues](https://github.com/better-auth/better-auth/issues)
-
----
-
 **Built with ❤️**
