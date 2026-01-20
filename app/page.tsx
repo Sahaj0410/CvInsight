@@ -20,14 +20,12 @@ export default function Home() {
       <div className="mt-10 relative z-10 max-w-2xl space-y-8">
         <div className="flex justify-center">
           <TextScramble className="text-4xl font-bold uppercase tracking-tight sm:text-5xl">
-            Bro, Job Kyu Nahi Lag Rahi?! 💀
+            Get Your Resume Reviewed by AI — Fast, Honest, and Free!
           </TextScramble>
         </div>
         <p className="text-lg text-muted-foreground">
-          Upload your resume, sit back, and let us roast—uhh… review—it 😎. Get real,
-          personalized feedback on what’s stopping you from landing that dream tech job. No
-          fake motivation, no sugarcoating — just straight-up insights to help you level up
-          your resume, skills, and chances.
+          Upload your resume and receive a clear, structured review focused on improving clarity, impact, and job relevance.
+CvInsight analyzes your resume against industry standards and hiring expectations, highlighting strengths, identifying gaps, and suggesting actionable improvements to help you stand out in today’s competitive job market.
         </p>
         <div className="flex justify-center">
           <ImageUploadDemo />
@@ -37,7 +35,7 @@ export default function Home() {
         </p>
         <div className="flex justify-center">
           <LiquidButton asChild size="xl" className="font-semibold">
-            <Link href="/review">😭 Tell Me Why I’m Jobless</Link>
+            <Link href="/review">Ask questions here</Link>
           </LiquidButton>
         </div>
       </div>

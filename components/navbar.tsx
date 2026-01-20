@@ -74,7 +74,7 @@ export const Header = () => {
                                     priority
                                 />
                                 <p className='text-2xl tracking-wide font-medium'>
-                                    JobKyuNahiLagRahi
+                                    CvInsight 
                                 </p>
                             </Link>
                         </div>
@@ -112,7 +112,7 @@ export const Header = () => {
                         {/* Right Side - Theme Switcher & Auth Buttons */}
                         <div className="hidden lg:flex items-center gap-3">
                             <a
-                                href="https://github.com/VineetPaun"
+                                href="https://github.com/Sahaj0410"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="p-2 hover:bg-accent rounded-lg transition-colors"
@@ -121,7 +121,7 @@ export const Header = () => {
                                 <Github className="size-5" />
                             </a>
                             <a
-                                href="https://www.linkedin.com/in/vineetpaun/"
+                                href="https://www.linkedin.com/in/sahaj-paun-b840a12a4/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="p-2 hover:bg-accent rounded-lg transition-colors"

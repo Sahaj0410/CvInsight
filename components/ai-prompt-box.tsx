@@ -690,8 +690,8 @@ export const PromptInputBox = React.forwardRef((props: PromptInputBoxProps, ref:
             )}
           >
             {/* 18+ Roast Mode Toggle */}
-            <PromptInputAction tooltip={isRoastMode ? "Disable 18+ Roast Mode" : "Enable 18+ Roast Mode"}>
-              <button
+            {/* <PromptInputAction tooltip={isRoastMode ? "Disable Roast Mode" : "Enable Roast Mode"}>
+              {/* <button
                 onClick={() => setIsRoastMode(!isRoastMode)}
                 className={cn(
                   "h-8 px-3 py-1 text-xs rounded-full border transition-all duration-200 cursor-pointer focus:outline-none focus:ring-1 focus:ring-(--color-ring) flex items-center gap-2 font-medium",
@@ -702,9 +702,9 @@ export const PromptInputBox = React.forwardRef((props: PromptInputBoxProps, ref:
                 disabled={isRecording || isLoading}
               >
                 <span className="text-sm">🔥</span>
-                <span>18+ Roast</span>
-              </button>
-            </PromptInputAction>
+                <span> Roast</span>
+              </button> */}
+            {/* </PromptInputAction> */} 
 
             {/* Model Selector - Hidden when roast mode is enabled */}
             {!isRoastMode && (

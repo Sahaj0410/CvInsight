@@ -426,7 +426,7 @@ const ReviewPage = () => {
                     {messages.length === 0 && (
                         <div className="flex h-full items-center justify-center text-center">
                             <div className="space-y-3">
-                                <h2 className="text-2xl font-semibold">Welcome to JobKyuNahiLagRahi</h2>
+                                <h2 className="text-2xl font-semibold">Welcome to CvInsight</h2>
                                 <p className="text-muted-foreground">
                                     Upload your resume to get started, or ask me anything about your job search!
                                 </p>
