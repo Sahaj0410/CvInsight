@@ -10,16 +10,13 @@ importers:
     dependencies:
       '@langchain/community':
         specifier: ^1.0.0
-        version: 1.0.0(@browserbasehq/sdk@2.6.0)(@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.1)(deepmerge@4.3.1)(dotenv@17.2.3)(openai@6.8.1(ws@8.18.3)(zod@4.1.12))(zod@4.1.12))(@ibm-cloud/watsonx-ai@1.7.2)(@langchain/core@1.0.3(openai@6.8.1(ws@8.18.3)(zod@4.1.12)))(@neondatabase/serverless@1.0.2)(ibm-cloud-sdk-core@5.4.3)(ignore@5.3.2)(jsonwebtoken@9.0.2)(openai@6.8.1(ws@8.18.3)(zod@4.1.12))(pdf-parse@1.1.1)(playwright@1.56.1)(ws@8.18.3)
+        version: 1.0.0(@browserbasehq/sdk@2.6.0)(@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.1)(deepmerge@4.3.1)(dotenv@17.2.3)(openai@6.8.1(ws@8.18.3)(zod@4.1.12))(zod@4.1.12))(@ibm-cloud/watsonx-ai@1.7.2)(@langchain/core@1.0.3(openai@6.8.1(ws@8.18.3)(zod@4.1.12)))(@neondatabase/serverless@1.0.2)(ibm-cloud-sdk-core@5.4.3)(ignore@5.3.2)(jsonwebtoken@9.0.2)(openai@6.8.1(ws@8.18.3)(zod@4.1.12))(pdf-parse@1.1.1)(pg@8.17.1)(playwright@1.56.1)(ws@8.18.3)
       '@langchain/core':
         specifier: ^1.0.3
         version: 1.0.3(openai@6.8.1(ws@8.18.3)(zod@4.1.12))
       '@langchain/textsplitters':
         specifier: ^1.0.0
         version: 1.0.0(@langchain/core@1.0.3(openai@6.8.1(ws@8.18.3)(zod@4.1.12)))
-      '@neondatabase/serverless':
-        specifier: ^1.0.2
-        version: 1.0.2
       '@radix-ui/react-avatar':
         specifier: ^1.1.10
         version: 1.1.10(@types/react-dom@19.2.2(@types/react@19.2.2))(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -61,7 +58,7 @@ importers:
         version: 17.2.3
       drizzle-orm:
         specifier: ^0.44.7
-        version: 0.44.7(@neondatabase/serverless@1.0.2)(@types/pg@8.15.6)(kysely@0.28.8)
+        version: 0.44.7(@neondatabase/serverless@1.0.2)(@types/pg@8.16.0)(kysely@0.28.8)(pg@8.17.1)
       framer-motion:
         specifier: ^12.23.24
         version: 12.23.24(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -80,6 +77,9 @@ importers:
       pdf-parse:
         specifier: 1.1.1
         version: 1.1.1
+      pg:
+        specifier: ^8.17.1
+        version: 8.17.1
       react:
         specifier: 19.2.0
         version: 19.2.0
@@ -105,6 +105,9 @@ importers:
       '@types/pdf-parse':
         specifier: ^1.1.5
         version: 1.1.5
+      '@types/pg':
+        specifier: ^8.16.0
+        version: 8.16.0
       '@types/react':
         specifier: ^19
         version: 19.2.2
@@ -1834,6 +1837,9 @@ packages:
 
   '@types/pg@8.15.6':
     resolution: {integrity: sha512-NoaMtzhxOrubeL/7UZuNTrejB4MPAJ0RpxZqXQf2qXuVlTPuG6Y8p4u9dKRaue4yjmC7ZhzVO2/Yyyn25znrPQ==}
+
+  '@types/pg@8.16.0':
+    resolution: {integrity: sha512-RmhMd/wD+CF8Dfo+cVIy3RR5cl8CyfXQ0tGgW6XBL8L4LM/UTEbNXYRbLwU6w+CgrKBNbrQWt4FUtTfaU5jSYQ==}
 
   '@types/react-dom@19.2.2':
     resolution: {integrity: sha512-9KQPoO6mZCi7jcIStSnlOWn2nEF3mNmyr3rIAsGnAbQKYbRLyqmeSc39EVgtxXVia+LMT8j3knZLAZAh+xLmrw==}
@@ -3605,16 +3611,39 @@ packages:
     resolution: {integrity: sha512-ZI3LnwUv5nOGbQzD9c2iDG6toheuXSZP5esSHBjopsXH4dg19soufvpUGA3uohi5anFtGb2lhAVdHzH6R/Evvg==}
     engines: {node: '>=8'}
 
+  pg-cloudflare@1.3.0:
+    resolution: {integrity: sha512-6lswVVSztmHiRtD6I8hw4qP/nDm1EJbKMRhf3HCYaqud7frGysPv7FYJ5noZQdhQtN2xJnimfMtvQq21pdbzyQ==}
+
+  pg-connection-string@2.10.0:
+    resolution: {integrity: sha512-ur/eoPKzDx2IjPaYyXS6Y8NSblxM7X64deV2ObV57vhjsWiwLvUD6meukAzogiOsu60GO8m/3Cb6FdJsWNjwXg==}
+
   pg-int8@1.0.1:
     resolution: {integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==}
     engines: {node: '>=4.0.0'}
 
-  pg-protocol@1.10.3:
-    resolution: {integrity: sha512-6DIBgBQaTKDJyxnXaLiLR8wBpQQcGWuAESkRBX/t6OwA8YsqP+iVSiond2EDy6Y/dsGk8rh/jtax3js5NeV7JQ==}
+  pg-pool@3.11.0:
+    resolution: {integrity: sha512-MJYfvHwtGp870aeusDh+hg9apvOe2zmpZJpyt+BMtzUWlVqbhFmMK6bOBXLBUPd7iRtIF9fZplDc7KrPN3PN7w==}
+    peerDependencies:
+      pg: '>=8.0'
+
+  pg-protocol@1.11.0:
+    resolution: {integrity: sha512-pfsxk2M9M3BuGgDOfuy37VNRRX3jmKgMjcvAcWqNDpZSf4cUmv8HSOl5ViRQFsfARFn0KuUQTgLxVMbNq5NW3g==}
 
   pg-types@2.2.0:
     resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==}
     engines: {node: '>=4'}
+
+  pg@8.17.1:
+    resolution: {integrity: sha512-EIR+jXdYNSMOrpRp7g6WgQr7SaZNZfS7IzZIO0oTNEeibq956JxeD15t3Jk3zZH0KH8DmOIx38qJfQenoE8bXQ==}
+    engines: {node: '>= 16.0.0'}
+    peerDependencies:
+      pg-native: '>=3.0.1'
+    peerDependenciesMeta:
+      pg-native:
+        optional: true
+
+  pgpass@1.0.5:
+    resolution: {integrity: sha512-FdW9r/jQZhSeohs1Z3sI1yxFQNFvMcnmfuj4WBMUTxOrAyLMaTcE1aAMBiTlbMNaXvBCQuVi0R7hd8udDSP7ug==}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -3906,6 +3935,10 @@ packages:
 
   space-separated-tokens@2.0.2:
     resolution: {integrity: sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q==}
+
+  split2@4.2.0:
+    resolution: {integrity: sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg==}
+    engines: {node: '>= 10.x'}
 
   stable-hash@0.0.5:
     resolution: {integrity: sha512-+L3ccpzibovGXFK+Ap/f8LOS0ahMrHTf3xu7mMLSpEGU0EO9ucaysSylKo9eRDFNhWve/y275iPmIZ4z39a9iA==}
@@ -4807,7 +4840,7 @@ snapshots:
       - openai
       - ws
 
-  '@langchain/community@1.0.0(@browserbasehq/sdk@2.6.0)(@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.1)(deepmerge@4.3.1)(dotenv@17.2.3)(openai@6.8.1(ws@8.18.3)(zod@4.1.12))(zod@4.1.12))(@ibm-cloud/watsonx-ai@1.7.2)(@langchain/core@1.0.3(openai@6.8.1(ws@8.18.3)(zod@4.1.12)))(@neondatabase/serverless@1.0.2)(ibm-cloud-sdk-core@5.4.3)(ignore@5.3.2)(jsonwebtoken@9.0.2)(openai@6.8.1(ws@8.18.3)(zod@4.1.12))(pdf-parse@1.1.1)(playwright@1.56.1)(ws@8.18.3)':
+  '@langchain/community@1.0.0(@browserbasehq/sdk@2.6.0)(@browserbasehq/stagehand@1.14.0(@playwright/test@1.56.1)(deepmerge@4.3.1)(dotenv@17.2.3)(openai@6.8.1(ws@8.18.3)(zod@4.1.12))(zod@4.1.12))(@ibm-cloud/watsonx-ai@1.7.2)(@langchain/core@1.0.3(openai@6.8.1(ws@8.18.3)(zod@4.1.12)))(@neondatabase/serverless@1.0.2)(ibm-cloud-sdk-core@5.4.3)(ignore@5.3.2)(jsonwebtoken@9.0.2)(openai@6.8.1(ws@8.18.3)(zod@4.1.12))(pdf-parse@1.1.1)(pg@8.17.1)(playwright@1.56.1)(ws@8.18.3)':
     dependencies:
       '@browserbasehq/stagehand': 1.14.0(@playwright/test@1.56.1)(deepmerge@4.3.1)(dotenv@17.2.3)(openai@6.8.1(ws@8.18.3)(zod@4.1.12))(zod@4.1.12)
       '@ibm-cloud/watsonx-ai': 1.7.2
@@ -4828,6 +4861,7 @@ snapshots:
       ignore: 5.3.2
       jsonwebtoken: 9.0.2
       pdf-parse: 1.1.1
+      pg: 8.17.1
       playwright: 1.56.1
       ws: 8.18.3
     transitivePeerDependencies:
@@ -4891,6 +4925,7 @@ snapshots:
     dependencies:
       '@types/node': 22.18.13
       '@types/pg': 8.15.6
+    optional: true
 
   '@next/env@16.0.10': {}
 
@@ -5551,6 +5586,7 @@ snapshots:
   '@types/node@22.18.13':
     dependencies:
       undici-types: 6.21.0
+    optional: true
 
   '@types/pdf-parse@1.1.5':
     dependencies:
@@ -5559,7 +5595,14 @@ snapshots:
   '@types/pg@8.15.6':
     dependencies:
       '@types/node': 20.19.24
-      pg-protocol: 1.10.3
+      pg-protocol: 1.11.0
+      pg-types: 2.2.0
+    optional: true
+
+  '@types/pg@8.16.0':
+    dependencies:
+      '@types/node': 20.19.24
+      pg-protocol: 1.11.0
       pg-types: 2.2.0
 
   '@types/react-dom@19.2.2(@types/react@19.2.2)':
@@ -6088,11 +6131,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.44.7(@neondatabase/serverless@1.0.2)(@types/pg@8.15.6)(kysely@0.28.8):
+  drizzle-orm@0.44.7(@neondatabase/serverless@1.0.2)(@types/pg@8.16.0)(kysely@0.28.8)(pg@8.17.1):
     optionalDependencies:
       '@neondatabase/serverless': 1.0.2
-      '@types/pg': 8.15.6
+      '@types/pg': 8.16.0
       kysely: 0.28.8
+      pg: 8.17.1
 
   dunder-proto@1.0.1:
     dependencies:
@@ -6744,7 +6788,7 @@ snapshots:
       isstream: 0.1.2
       jsonwebtoken: 9.0.2
       mime-types: 2.1.35
-      retry-axios: 2.6.0(axios@1.13.2(debug@4.4.3))
+      retry-axios: 2.6.0(axios@1.13.2)
       tough-cookie: 4.1.4
     transitivePeerDependencies:
       - supports-color
@@ -7634,9 +7678,18 @@ snapshots:
 
   peek-readable@4.1.0: {}
 
+  pg-cloudflare@1.3.0:
+    optional: true
+
+  pg-connection-string@2.10.0: {}
+
   pg-int8@1.0.1: {}
 
-  pg-protocol@1.10.3: {}
+  pg-pool@3.11.0(pg@8.17.1):
+    dependencies:
+      pg: 8.17.1
+
+  pg-protocol@1.11.0: {}
 
   pg-types@2.2.0:
     dependencies:
@@ -7645,6 +7698,20 @@ snapshots:
       postgres-bytea: 1.0.0
       postgres-date: 1.0.7
       postgres-interval: 1.2.0
+
+  pg@8.17.1:
+    dependencies:
+      pg-connection-string: 2.10.0
+      pg-pool: 3.11.0(pg@8.17.1)
+      pg-protocol: 1.11.0
+      pg-types: 2.2.0
+      pgpass: 1.0.5
+    optionalDependencies:
+      pg-cloudflare: 1.3.0
+
+  pgpass@1.0.5:
+    dependencies:
+      split2: 4.2.0
 
   picocolors@1.1.1: {}
 
@@ -7854,7 +7921,7 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  retry-axios@2.6.0(axios@1.13.2(debug@4.4.3)):
+  retry-axios@2.6.0(axios@1.13.2):
     dependencies:
       axios: 1.13.2(debug@4.4.3)
 
@@ -7995,6 +8062,8 @@ snapshots:
   source-map@0.6.1: {}
 
   space-separated-tokens@2.0.2: {}
+
+  split2@4.2.0: {}
 
   stable-hash@0.0.5: {}
 
